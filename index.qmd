@@ -1,0 +1,119 @@
+---
+title: "State-Level ChatGPT Search Intensity Analysis"
+format: html
+---
+
+## Research Question
+
+**How is search intensity for AI (specifically ChatGPT) associated with income, education, broadband access, and industry composition at the state level?**
+
+This analysis examines correlations between:
+- ChatGPT search intensity (Google Trends)
+- Median household income
+- Education levels (% with bachelor's degree or higher)
+- Internet access (% households with internet)
+- Knowledge economy employment (% in knowledge industries)
+
+## Project Overview
+
+This project analyzes state-level patterns in AI search interest using multiple regression analysis to understand the socioeconomic factors associated with ChatGPT search intensity across the United States. The analysis uses data from 51 observations (50 states + District of Columbia) to identify key predictors of AI technology adoption and interest.
+
+## Methodology
+
+### Data Collection
+- **Google Trends**: State-level search interest for "ChatGPT" (past 12 months)
+- **American Community Survey (ACS) 5-year estimates (2022)**:
+  - Table B19013: Median household income
+  - Table B15003: Educational attainment (% bachelor's+)
+  - Table B28002: Internet subscription (% with internet)
+- **BLS Industry Data**: Knowledge economy employment percentages
+- **2020 Presidential Election Results**: Political affiliation (blue/red state dummy variable)
+
+### Analytical Approach
+- Correlation analysis to identify relationships
+- Multiple linear regression (OLS) with all predictors
+- Ridge and Lasso regression to address multicollinearity
+- Cross-validation to assess model performance
+- Geographic visualizations (choropleth maps)
+
+## Key Findings
+
+### Correlations
+- **Strong positive correlations** between ChatGPT search intensity and:
+  - Knowledge economy employment (r = 0.568)
+  - Education levels (r = 0.530)
+  - Median household income (r = 0.518)
+  - Political affiliation - Blue states (r = 0.426)
+  - Internet access (r = 0.404)
+
+### Regression Results
+- **Model R² = 0.387** (38.7% of variance explained)
+- **Overall model significance**: p < 0.001
+- **Significant predictor**: Knowledge economy employment (p = 0.023)
+- **Multicollinearity**: High correlation between predictors (VIF > 20 for most variables)
+
+### Geographic Patterns
+Higher ChatGPT search intensity is observed in states with:
+- Higher education levels
+- Higher median income
+- Better internet infrastructure
+- Larger knowledge economy sectors
+- Democratic political affiliation (blue states)
+
+## Limitations
+
+### Data Limitations
+1. **Sample Size**: 51 observations (states + DC) limits statistical power
+2. **Temporal Scope**: Analysis uses 12-month Google Trends data; longer time series could reveal trends
+3. **Google Trends Data**: 
+   - Relative search intensity (0-100 scale) rather than absolute search volume
+   - **Note on Metro/City-Level Data**: Google Trends data at metro or city levels is less reliable due to smaller sample sizes, privacy thresholds that suppress low-volume searches, and inconsistent geographic boundaries. State-level aggregation provides more stable and reliable estimates.
+4. **Cross-Sectional Analysis**: Cannot establish causality; only associations are identified
+5. **Multicollinearity**: High correlation between socioeconomic variables makes it difficult to isolate individual effects
+
+### Methodological Limitations
+1. **Missing Variables**: Other factors (e.g., tech industry presence, research institutions, media coverage) not included
+2. **Linear Assumptions**: Assumes linear relationships; non-linear patterns may exist
+3. **Homogeneity**: Assumes relationships are consistent across all states
+
+## Next Steps
+
+### Future Research Directions
+1. **Temporal Analysis**: Examine trends over multiple years to identify changes in AI interest
+2. **Causal Inference**: Use instrumental variables or natural experiments to establish causality
+3. **Additional Predictors**: Include variables such as:
+   - Tech industry employment
+   - University research funding
+   - Media coverage of AI
+   - State-level AI policies
+4. **Sub-State Analysis**: Explore county or metro-level patterns where data quality permits
+5. **Comparative Analysis**: Compare ChatGPT interest with other AI tools (Gemini, Claude)
+6. **Qualitative Research**: Conduct interviews or surveys to understand motivations behind searches
+
+### Methodological Improvements
+1. **Address Multicollinearity**: Use principal component analysis or factor analysis
+2. **Non-Linear Models**: Explore polynomial or interaction terms
+3. **Spatial Analysis**: Account for spatial autocorrelation between neighboring states
+4. **Panel Data**: Collect multi-year data for longitudinal analysis
+
+## Conclusions
+
+This analysis reveals that ChatGPT search intensity is significantly associated with socioeconomic factors, particularly knowledge economy employment. The findings suggest that states with stronger knowledge-based economies and higher education levels show greater interest in AI technologies like ChatGPT.
+
+While the model explains a moderate portion of variance (38.7%), the presence of multicollinearity indicates that these socioeconomic factors are highly interrelated. The knowledge economy variable emerges as the most significant individual predictor, highlighting the role of economic structure in technology adoption.
+
+These results have implications for understanding the digital divide in AI technology awareness and adoption, suggesting that educational and economic development policies may influence how communities engage with emerging AI tools.
+
+## Full Analysis
+
+[View the complete analysis with all visualizations, regression results, and detailed methodology →](Final_Project_Sam_Sen.html)
+
+---
+
+**Project Information**
+
+- **Course**: MUSA 5500 Final Project
+- **Analysis Period**: December 2024
+- **Data Sources**: Google Trends, U.S. Census Bureau (ACS), Bureau of Labor Statistics
+- **Last Updated**: December 2024
+

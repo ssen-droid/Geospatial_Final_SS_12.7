@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - Final_Project_Sam_Sen.ipynb
+
+website:
+  title: "State-Level ChatGPT Search Intensity Analysis"
+  navbar:
+    left:
+      - href: index.html
+        text: Home
+      - href: Final_Project_Sam_Sen.html
+        text: Full Analysis
+    right:
+      - icon: github
+        href: https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: show
+    code-tools: true
+    embed-resources: true
+    fig-width: 10
+    fig-height: 6
+    fig-dpi: 300
+
+jupyter:
+  ipynb-filters:
+    - quarto-nbconvert.py:stdout
+    - quarto-nbconvert.py:stderr
+
+execute:
+  freeze: auto
+  cache: true
+  warning: false
+  message: false
+

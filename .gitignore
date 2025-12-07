@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Quarto
+.quarto/
+_site/
+# Note: docs/ folder is NOT ignored - we need it for GitHub Pages
+
+# Data files (keep structure, ignore large files)
+Data/raw/*.xlsx
+Data/raw/*.xls
+# Keep CSV files for the website
+# Data/raw/*.csv
+
+# Config files with API keys
+config.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files - but allow docs folder for GitHub Pages
+*.html
+!docs/
+!docs/**
+*.pdf
+*.pptx
+
+# Temporary files
+*.tmp
+*.log
+
+/.quarto/
+**/*.quarto_ipynb

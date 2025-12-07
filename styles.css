@@ -1,0 +1,51 @@
+/* Custom styles for the Quarto website */
+
+/* Make code cells more readable */
+.cell {
+    margin-bottom: 1.5em;
+}
+
+/* Style for output cells */
+.cell-output {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border-radius: 4px;
+    margin-top: 0.5em;
+}
+
+/* Improve map visibility */
+.plotly {
+    width: 100%;
+    height: 600px;
+}
+
+/* Style for interactive elements */
+.interactive-map {
+    margin: 2em 0;
+}
+
+/* Better spacing for headers */
+h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Style for print statements */
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+/* Improve table readability */
+table {
+    margin: 1em 0;
+    width: 100%;
+}
+
+/* Style for navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
